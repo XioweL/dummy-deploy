@@ -1,0 +1,106 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Article Portofolio CMS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Article CMS</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Settings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Users</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Button Untuk menampilkan articleForm -->
+    <section class="px-5 mt-4">
+      <div class="d-grid gap-2">
+        <button class="btn btn-secondary" type="button" id="btn-article">
+          Create New Article
+        </button>
+      </div>
+      <!-- Article Form Untuk pengisian content -->
+      <form class="border rounded px-4 py-3 mt-4 d-none" id="articleForm">
+        <h3>New Article Form</h3>
+        <div>
+          <!-- Form Title -->
+          <div class="mb-3">
+            <label class="form-label">Aritcle title</label>
+            <input type="text" class="form-control" id="title" required />
+          </div>
+        </div>
+        <!-- Form Image URL -->
+        <div class="mb-3">
+          <label class="form-label">Image URL</label>
+          <input
+            type="text"
+            class="form-control"
+            id="image"
+            list="datalistOptions"
+            required
+          />
+          <!-- Menambahkan datalist Untuk memudahkan pengisian Image URL -->
+          <datalist id="datalistOptions">
+            <option value="https://placehold.co/800x600"></option>
+            <option value="https://placehold.co/500x500"></option>
+            <option value="https://placehold.co/100x100"></option>
+          </datalist>
+        </div>
+        <!-- Form content -->
+        <div class="mb-3">
+          <label class="form-label">Content</label>
+          <textarea
+            class="form-control"
+            placeholder="Article content here"
+            id="content"
+          ></textarea>
+        </div>
+        <!-- Button Submit untuk menambahkan article -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </section>
+
+    <!-- Article Baru Akan di tambahkan di dalam ini -->
+    <section id="article-section" class="p-5"></section>
+
+    <script src="assets/js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
